@@ -78,6 +78,7 @@ module "test_sg_ingress" {
 
   from_port = each.value["from_port"]
   to_port = each.value["to_port"]
+  protocol = "tcp"
   cidr_blocks = each.value["cidr_block"]
 
   sg_rule_type      = "ingress"
